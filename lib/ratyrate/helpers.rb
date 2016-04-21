@@ -32,9 +32,9 @@ module Helpers
 
     unless readOnly
       if disable_after_rate
-        readOnly = !(current_user && rateable_obj.can_rate?(current_user, dimension))
+        readOnly = !(current_customer && rateable_obj.can_rate?(current_customer, dimension))
       else
-        readOnly = !current_user || false
+        readOnly = !current_customer || false
       end
     end
 
